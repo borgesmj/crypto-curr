@@ -1,12 +1,12 @@
 import React from "react";
 import Arrow from "./Arrow";
 
-const Body = () => {
-  const coinName = "Bitcoin";
-  const coin24H = 0.64697;
-  const coinPrice = 46256;
+const Body = ({name, price_change_percentage_24h, current_price, coin_image}) => {
+  const coinName = name;
+  const coin24H = price_change_percentage_24h;
+  const coinPrice = current_price;
   const arrowColor = coin24H < 0 ? "red" : "green";
-  const coinImg = 'https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400'
+  const coinImg = coin_image
 
   return (
     <tr className="border-b-solid border-b-[1px] border-b-[#ffffff50] table-row text-xs md:text-xl lg:text-xl">

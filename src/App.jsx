@@ -21,12 +21,13 @@ function App() {
     fetchData()
   },[])
 
-  console.log(coinData)
 
   return (
     <div className='w-screen h-screen bg-[#1A1A1A] max-w-screen  text-[#FFFFFF] p-4 select-none'>
       <Header/>
-      <CryptoTable/>
+      <CryptoTable
+          coinData={coinData}
+      />
     </div>
   )
 }

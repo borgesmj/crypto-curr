@@ -6,7 +6,7 @@ const Head = () => {
       <tr className='py-4 table-row'>
         <th className='table-cell'>Assets</th>
         <th className='table-cell'></th>
-        <th className='table-cell'>Price</th>
+        <th className='table-cell'>Price($)</th>
         <th className='table-cell'>24H</th>
         <th></th>
       </tr>
