@@ -9,7 +9,7 @@ const Body = () => {
   const coinImg = 'https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400'
 
   return (
-    <tr className="border-b-solid border-b-[1px] border-b-[#ffffff50] table-row text-xs md:text-xl">
+    <tr className="border-b-solid border-b-[1px] border-b-[#ffffff50] table-row text-xs md:text-xl lg:text-xl">
       <td className="table-cell py-[12px]   w-4">
         <img
           className="w-full"

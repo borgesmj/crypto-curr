@@ -3,10 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center h-fil p-4">
-      <h1 className="uppercase font-bold text-md text-center m-4">
+      <h1 className="uppercase font-bold text-md text-center m-4 md:text-2xl">
         Top 10 crypto coins currency
       </h1>
-      <p className="text-xs text-center m-2">
+      <p className="text-xs text-center m-2 md:text-xl">
         A practice project I made for{" "}
         <a
           target="blank"
