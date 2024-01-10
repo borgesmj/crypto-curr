@@ -1,8 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './Components/Header'
 import CryptoTable from './Components/CryptoTable'
+import axios from 'axios'
 
 function App() {
+
+  const [coinData, setCoinData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=10')
+        setCoinData(response.data)
+      }
+      catch (err) {
+        console.log(err)
+      }
+
+    }
+    fetchData()
+  },[])
+
+  console.log(coinData)
 
   return (
     <div className='w-screen h-screen bg-[#1A1A1A] max-w-screen  text-[#FFFFFF] p-4 select-none'>
