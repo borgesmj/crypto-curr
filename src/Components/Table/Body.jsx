@@ -1,5 +1,6 @@
 import React from "react";
 import Arrow from "./Arrow";
+import { NavLink } from "react-router-dom";
 
 const Body = ({name, price_change_percentage_24h, current_price, coin_image}) => {
   const coinName = name;
@@ -31,7 +32,7 @@ const Body = ({name, price_change_percentage_24h, current_price, coin_image}) =>
           {coin24H.toFixed(2)}
         </span>
       </td>
-      <td className=" table-cell py-[12px]">See More</td>
+      <td className=" table-cell py-[12px]"><NavLink to={`/crypto-curr/${coinName}`} className="text-[#ddb900] border-b-[#ddb900]  border-b-solid border-b-[1px]">See More</NavLink></td>
     </tr>
   );
 };
