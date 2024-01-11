@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import CryptoTable from "./Components/CryptoTable";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
+import Footer from './Components/Footer'
 
 function App() {
   const [coinData, setCoinData] = useState([]);
@@ -30,6 +31,7 @@ function App() {
           element={<CryptoTable coinData={coinData} />}
         ></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
