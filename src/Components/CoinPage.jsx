@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import BackBtn from "./CoinPage/BackBtn";
+import './CoinPage.css'
 
 const CoinPage = ({ coinData }) => {
   let { name } = useParams();
@@ -11,17 +12,22 @@ const CoinPage = ({ coinData }) => {
 
   const coinInfo = filteredData[0];
   console.log(coinInfo);
+
+
+  const formatearFecha = (date) =>{
+    return new Date(date).toLocaleDateString()
+  } 
   return (
-    <div className=" overflow-auto p-4 w-full h-[350px] md:h-[750px] lg:h-[650px]">
+    <div id='coinpage' className="overflow-auto p-4 w-full h-[350px] md:h-[750px] lg:h-[650px] text-xs md:text-xl lg:text-2xl">
       <div
-        className="w-full"
+        className="h-10 w-auto"
         onClick={() => {
           navigate(-1);
         }}
       >
-        <BackBtn />
+        <BackBtn className='h-full' />
       </div>
-      <div className="w-full h-fit p-2 flex flex-wrap md:p-4">
+      <div className="w-full h-fit p-2 flex flex-wrap md:p-4 justify-between items-start">
         <section className="flex flex-col items-start justify-between w-full mb-4">
           <img src={coinInfo?.image} alt="" className="w-20 h-auto m-auto" />
           <table className="w-full">
@@ -40,28 +46,28 @@ const CoinPage = ({ coinData }) => {
               </tr>
               <tr>
                 <th className="px-1">Market Cap Rank:</th>
-                <td className="px-1">${coinInfo?.market_cap_rank}</td>
+                <td className="px-1">{coinInfo?.market_cap_rank}</td>
               </tr>
             </tbody>
           </table>
         </section>
         <section className="flex flex-col items-center justify-between w-full mb-4">
-          <h1 className="font-bold">Last 24h</h1>
-          <table className="w-full text-center">
+          <h1 className="font-bold border-b-solid border-b-white border-b-[1px] w-full text-center text-[#FFD700]">Last 24h</h1>
+          <table className="w-full">
             <tbody className="w-full">
               <tr>
-                <th>High</th>
-                <th>Low</th>
+                <th>High:</th>
+                <td>{coinInfo?.high_24h}$</td>
               </tr>
               <tr>
-                <td>{coinInfo?.high_24h}</td>
-                <td>{coinInfo?.low_24h}</td>
+                <th>Low:</th>
+                <td>{coinInfo?.low_24h}$</td>
               </tr>
             </tbody>
           </table>
         </section>
-        <section className="flex flex-col items-center justify-between w-full mb-4">
-          <h1 className="font-bold">Price and Capitalization Statistics</h1>
+        <section className="flex flex-col items-center justify-between w-full mb-4 md:w-[45%] md:mr-4 h-fit">
+        <h1 className="font-bold border-b-solid border-b-white border-b-[1px] w-full text-center text-[#FFD700]">Price and Capitalization Statistics</h1>
           <table className="w-full">
             <tbody>
               <tr>
@@ -83,41 +89,41 @@ const CoinPage = ({ coinData }) => {
             </tbody>
           </table>
         </section>
-        <section className="flex flex-col items-center justify-between w-full mb-4">
-          <h1 className="font-bold">Price and Trading Volume History</h1>
+        <section className="flex flex-col items-center justify-between w-full mb-4  md:w-[45%]">
+        <h1 className="font-bold border-b-solid border-b-white border-b-[1px] w-full text-center text-[#FFD700]">Price and Trading Volume History</h1>
           <table className="w-full">
                 <tbody>
                     <tr>
-                        <th>Lowest Price</th>
+                        <th>Lowest Price:</th>
                         <td>{coinInfo?.atl}$</td>
                     </tr>
                     <tr>
-                        <th>Low Price Date</th>
-                        <td>{coinInfo?.atl_date}</td>
+                        <th>Low Price Date:</th>
+                        <td>{formatearFecha(coinInfo?.atl_date)}</td>
                     </tr>
                     <tr>
-                        <th>Maximum Price</th>
+                        <th>Maximum Price:</th>
                         <td>{coinInfo?.ath}$</td>
                     </tr>
                     <tr>
-                        <th>High Price Date</th>
-                        <td>{coinInfo?.ath_date}</td>
+                        <th>High Price Date:</th>
+                        <td>{formatearFecha(coinInfo?.ath_date)}</td>
                     </tr>
                     <tr>
-                        <th>Price Change in the Last 24 Hours</th>
+                        <th>Price Change in the Last 24 Hours:</th>
                         <td>{coinInfo?.price_change_24h}$</td>
                     </tr>
                     <tr>
-                        <th>Price Change % in the Last 24 Hours</th>
+                        <th>Price Change % in the Last 24 Hours:</th>
                         <td>{coinInfo?.price_change_percentage_24h}%</td>
                     </tr>
                     <tr>
-                        <th>Last 24 Hours Trading Volume</th>
-                        <td>{coinInfo?.total_volume}%</td>
+                        <th>Last 24 Hours Trading Volume:</th>
+                        <td>{coinInfo?.total_volume}</td>
                     </tr>
                     <tr>
-                        <th>Last Update</th>
-                        <td>{coinInfo?.last_updated}</td>
+                        <th>Last Update:</th>
+                        <td>{formatearFecha(coinInfo?.last_updated)}</td>
                     </tr>
                 </tbody>
           </table>

@@ -1,0 +1,19 @@
+#coinpage th{
+    text-align: right;
+    padding-right: 5px;
+    width: 50%;
+}
+
+#coinpage td{
+    text-align: left;
+    padding-left: 5px;
+    width: 50%;
+}
+
+#coinpage tr{
+    margin-bottom: 5px;
+    border-bottom: solid 0.5px #ffffff50;
+}
+
+table{
+}

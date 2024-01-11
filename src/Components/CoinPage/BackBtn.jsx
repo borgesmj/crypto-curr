@@ -1,12 +1,13 @@
 import React from "react";
 
-const BackBtn = () => {
+const BackBtn = ({className}) => {
   return (
     <svg
       width="1rem"
-      height="1rem"
+      height={className}
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
+      className="hover:cursor-pointer"
     >
       <path
         fill="#ddb900"
