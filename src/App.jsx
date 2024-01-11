@@ -4,6 +4,7 @@ import CryptoTable from "./Components/CryptoTable";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import Footer from './Components/Footer'
+import CoinPage from "./Components/CoinPage";
 
 function App() {
   const [coinData, setCoinData] = useState([]);
@@ -29,6 +30,10 @@ function App() {
         <Route
           path="/crypto-curr/"
           element={<CryptoTable coinData={coinData} />}
+        ></Route>
+        <Route
+          path="/crypto-curr/:name"
+          element={<CoinPage coinData={coinData}/>}
         ></Route>
       </Routes>
       <Footer/>
