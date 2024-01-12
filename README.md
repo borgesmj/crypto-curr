@@ -25,13 +25,29 @@ Muestra detalles relevantes, como el nombre, símbolo, precio actual y cambios r
 Implementa la funcionalidad para actualizar automáticamente los datos de la tabla a intervalos regulares, reflejando la dinámica cambiante del mercado de criptomonedas.
 
 ## Stack utilizado
-Lenguajes, tecnología y frameworks utilizados en el desarrollo
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![ghpages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
 
 ## Screenshots y vista previa
-Screenshots o enlace a la vista previa del trabajo finalizado
+### Version mobile
+![Alt text](src/IMG/mobile.jpeg)
+### Version tablet
+![Alt text](src/IMG/iPad.jpeg)
+###Version Desktop
+![Alt text](src/IMG/desktop.jpeg)
+
 
 ## Instalación
-Instrucciones para otros desarrolladores sobre cómo instalar y ejecutar tu código en su entorno local.
+1. Clona el repositorio
+`git clone https://github.com/borgesmj/crypto-curr.git` 
+2. Instala dependencias
+`npm install`
+3. Corre el proyecto
+`npm run dev`
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
