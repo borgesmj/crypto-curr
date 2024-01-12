@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-screen h-screen bg-[#1A1A1A] max-w-screen  text-[#FFFFFF] p-4 select-none">
+    <div className="w-screen h-dvh md:h-screen bg-[#1A1A1A] max-w-screen  text-[#FFFFFF] p-4 select-none">
       <Header />
       <Routes>
         <Route
