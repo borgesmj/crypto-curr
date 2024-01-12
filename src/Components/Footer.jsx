@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
       <div className="w-1/2 h-full flex flex-wrap justify-around items-center">
         {RRSS.map((item, index) => (
-          <a href={item.link} index={item} className="hover:cursor-pointer  w-2/5 h-1/2 flex justify-center items-center lg:w-1/4 lg:h-full" target="blank">{item.icon}</a>
+          <a href={item.link} key={index} className="hover:cursor-pointer  w-2/5 h-1/2 flex justify-center items-center lg:w-1/4 lg:h-full" target="blank">{item.icon}</a>
         ))}
       </div>
     </footer>
