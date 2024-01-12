@@ -4,7 +4,7 @@ import Body from "./Table/Body";
 
 const CryptoTable = ({coinData}) => {
   return (
-    <div className="overflow-auto h-[350px] md:h-[650px] lg:h-[550px]">
+    <div className="overflow-auto h-[350px] md:h-[650px] lg:h-[330px] xl:h-[500px] 2xl:h-[650px]">
       <table className="w-full text-center md:w-4/5 md:m-auto table">
         <Head />
         <tbody className="w-full h-10">
